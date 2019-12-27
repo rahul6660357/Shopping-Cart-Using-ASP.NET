@@ -1,0 +1,55 @@
+D:\.NET\Shopping Cart\bin\Shopping Cart.dll.config
+D:\.NET\Shopping Cart\bin\Shopping Cart.dll
+D:\.NET\Shopping Cart\bin\Shopping Cart.pdb
+D:\.NET\Shopping Cart\bin\roslyn\csc.exe
+D:\.NET\Shopping Cart\bin\roslyn\csc.exe.config
+D:\.NET\Shopping Cart\bin\roslyn\csc.rsp
+D:\.NET\Shopping Cart\bin\roslyn\csi.exe
+D:\.NET\Shopping Cart\bin\roslyn\csi.exe.config
+D:\.NET\Shopping Cart\bin\roslyn\csi.rsp
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.Managed.Core.targets
+D:\.NET\Shopping Cart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\.NET\Shopping Cart\bin\roslyn\System.AppContext.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Collections.Immutable.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Console.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.IO.Compression.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.IO.FileSystem.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.IO.Pipes.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Reflection.Metadata.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Security.AccessControl.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Security.Claims.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Security.Principal.Windows.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.ValueTuple.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Xml.XmlDocument.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Xml.XPath.dll
+D:\.NET\Shopping Cart\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\.NET\Shopping Cart\bin\roslyn\vbc.exe
+D:\.NET\Shopping Cart\bin\roslyn\vbc.exe.config
+D:\.NET\Shopping Cart\bin\roslyn\vbc.rsp
+D:\.NET\Shopping Cart\bin\roslyn\VBCSCompiler.exe
+D:\.NET\Shopping Cart\bin\roslyn\VBCSCompiler.exe.config
+D:\.NET\Shopping Cart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\.NET\Shopping Cart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\.NET\Shopping Cart\obj\Debug\Shopping Cart.csprojAssemblyReference.cache
+D:\.NET\Shopping Cart\obj\Debug\Shopping Cart.csproj.CopyComplete
+D:\.NET\Shopping Cart\obj\Debug\Shopping Cart.dll
+D:\.NET\Shopping Cart\obj\Debug\Shopping Cart.pdb
