@@ -33,31 +33,49 @@ namespace Shopping_Cart
         protected global::System.Web.UI.WebControls.Button searchbtn;
 
         /// <summary>
-        /// checkbox control.
+        /// radio1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkbox;
+        protected global::System.Web.UI.WebControls.RadioButton radio1;
 
         /// <summary>
-        /// checkbox2 control.
+        /// radio2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkbox2;
+        protected global::System.Web.UI.WebControls.RadioButton radio2;
 
         /// <summary>
-        /// checkbox3 control.
+        /// radio3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkbox3;
+        protected global::System.Web.UI.WebControls.RadioButton radio3;
+
+        /// <summary>
+        /// RadioButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+
+        /// <summary>
+        /// RadioButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
 
         /// <summary>
         /// productlist control.

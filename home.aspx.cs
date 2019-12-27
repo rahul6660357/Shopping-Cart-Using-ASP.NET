@@ -32,8 +32,37 @@ namespace Shopping_Cart
             st.SelectCommand = cmd;
             DataTable dtable = new DataTable();
             st.Fill(dtable);
-          
+            productlist.DataSource = dtable;
+            productlist.DataBind();
+            con.Close();
 
+
+        }
+        public void showhome()
+        {
+            cmd = new SqlCommand("select * from products ");
+            SqlDataAdapter st = new SqlDataAdapter();
+            cmd.Connection = con;
+            con.Open();
+            st.SelectCommand = cmd;
+            DataTable dtable = new DataTable();
+            st.Fill(dtable);
+            productlist.DataSource = dtable;
+            productlist.DataBind();
+            con.Close();
+        }
+        public void showelectronics()
+        {
+            cmd = new SqlCommand("select * from products where category = 'electrical' ");
+            SqlDataAdapter st = new SqlDataAdapter();
+            cmd.Connection = con;
+            con.Open();
+            st.SelectCommand = cmd;
+            DataTable dtable = new DataTable();
+            st.Fill(dtable);
+            productlist.DataSource = dtable;
+            productlist.DataBind();
+            con.Close();
         }
     }
 }

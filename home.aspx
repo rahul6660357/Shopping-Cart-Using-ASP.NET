@@ -392,6 +392,7 @@ section {
 .ullu{
     display:flex;
     justify-content:space-between;
+
 }
 
 .btn{
@@ -408,27 +409,71 @@ section {
         .abc {
         display:flex;
         }
+        .backgroundclass{
+            background-color:gray;
+            display:flex;
+        }
+        .firstdiv{
+            width:25%;
+        }
+        .seconddiv{
+            width:75%;
+            display:flex;
+            flex-wrap:wrap;
+            margin:20px;
+        }
+        .cardd{
+            margin:10px;
+        }
+        .ulli{
+            cursor:pointer;
+
+        }
+
+        .btn{
+  border-color:cadetblue;
+  cursor: pointer;
+}
+.company-style{
+  font-family: cursive;
+}
+
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
 
+<%--        top navbar--%>
+
+        
+  <div class="abc ullu" style="background-color:black">
+    <div class="mr-auto text-white"><h3 class="company-style mt-1">Rahul's_Shopping-Cart</h3></div>
+      <div class="abc " style="align-content:center">
+    <div class="p-2 text-white"><button class=" btn">Add New Product</button></div>
+    <div class="p-2"><button class=" btn">My Profile</button></div>
+    <div class="p-2"><button class=" btn">My Cart</button></div>
+    <div class="p-2"><button class=" btn">LogOut</button></div>
+  </div>
+      </div>
+           
+
+
 
         <ul class=" ullu nav nav-pills nav-fill bg-info  ">
   <li class="nav-item">
-    <a  class="nav-link text-white" href="#">HOME</a>
+    <asp:LinkButton  class="nav-link text-white ulli" runat="server" Click="showhome" Text="HOME"></asp:LinkButton>
   </li>
   <li class="nav-item">
-    <a  class="nav-link text-white" href="#">ELECTRONICS</a>
+    <asp:LinkButton runat="server"  class="nav-link text-white ulli" Text="ELECTRONICS"  Click="showelectronics"></asp:LinkButton>
   </li>
   <li class="nav-item">
-    <a  class="nav-link text-white" href="#">BOOKS</a>
+    <asp:HyperLink runat="server" class="nav-link text-white ulli" Text="BOOKS"></asp:HyperLink>
   </li>
   <li class="nav-item">
-    <a  class="nav-link text-white" href="#">SHOES</a>
+    <asp:HyperLink runat="server" Text="SHOES"  class="nav-link text-white ulli" ></asp:HyperLink>
   </li>
   <li class="nav-item">
-    <a  class="nav-link text-white" href="#">CLOTHINGS</a>
+    <asp:HyperLink runat="server"  class="nav-link text-white ulli" Text="CLOTHINGS"></asp:HyperLink>
   </li>
 </ul>
 
@@ -491,7 +536,83 @@ section {
 
 <%--this is main home page here--%>
 
-        <div class="d-flex" style="background-color: lightgray">
+        <div class=" backgroundclass" >
+            <div class="firstdiv bg-dark ">
+              
+  <div  style="margin:20px ">
+    <div class="card bg-info m-5">
+      <div class="card-body text-center">
+        <h4  class="text-danger">Filter Items</h4>
+        <div class="form-check">
+          <label class="form-check-label">
+            <asp:RadioButton ID="radio1" runat="server" class="form-check-input" GroupName="price" Text="99-2000"/>
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <asp:RadioButton ID="radio2" class="form-check-input" runat="server" GroupName="price" Text="2000-4000"/>
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <asp:RadioButton runat="server"  ID="radio3" class="form-check-input" GroupName="price" Text="4000-6000"/>
+          </label>
+        </div>
+          <div class="form-check">
+          <label class="form-check-label">
+            <asp:RadioButton runat="server"  ID="RadioButton1" class="form-check-input" GroupName="price" Text="6000-10000"/>
+          </label>
+        </div>
+          <div class="form-check">
+          <label class="form-check-label">
+            <asp:RadioButton runat="server"  ID="RadioButton2" class="form-check-input" GroupName="price" Text="10000-20000"/>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+            <div class="seconddiv">
+               
+                <asp:DataList ID="productlist" runat="server" RepeatColumns="4">
+            <ItemTemplate>
+
+                <div  class="m-2 cardd bg-info">
+
+    <div class="card" style="width:225px; height: 320px">
+
+      <div class="mt-3 mx-auto ">
+        <asp:Image ImageUrl='<%# Bind("image") %>' Width="225px" Height="130px" runat="server" ID="img1"  />
+      </div>
+      <div class="card-body text-center">
+        <h4 class="card-title text-center mb-2">
+          
+            <asp:Label ID="lbl2" runat="server" Text='<%# Bind("name") %>'>
+           
+            </asp:Label>
+        </h4>
+
+        <div class="bg-success text-white text-center">
+              Price:
+           <asp:Label runat="server" Text= '<%# Bind("price") %>' ID="pricelbl"></asp:Label>
+        </div>
+      <div>  <a href="#" class="text-primary stretched-link " >View Details</a></div>
+        <a href="#" class="btn btn-primary  stretched-link">Add To Cart</a>
+      </div>
+    </div>
+
+
+                </ItemTemplate>
+                    </asp:DataList>
+        </div>
+</div>
+
+
+
+
+
+
+<%--        <div class="d-flex" style="background-color: lightgray">
 <div class="d-flex bg-dark  w-25"  >
   <div  style="margin-left:10px;margin-top:20px">
     <div class="card bg-info m-5">
@@ -525,17 +646,17 @@ section {
     <div class="card" style="width:225px; height: 320px">
 
       <div class="mt-3 mx-auto">
-        <asp:Image ImageUrl="~/Images/cc1.jpg" runat="server" ID="img1"  />
+        <asp:Image ImageUrl='<%# Bind("image") %>' runat="server" ID="img1"  />
       </div>
       <div class="card-body text-center">
         <h4 class="card-title text-center mb-2">
-            <asp:Label ID="lbl2" runat="server">
-            '<%# Bind("name") %>'
+            <asp:Label ID="lbl2" runat="server" Text= '<%# Bind("name") %>'>
+           
             </asp:Label>
         </h4>
 
         <div class="bg-success text-white text-center mb-3">
-            <%# Bind("price") %>
+           <asp:Label runat="server" Text= '<%# Bind("price") %>' ID="pricelbl"></asp:Label>
         </div>
         <a href="#" class="text-primary stretched-link mb-3">View Details</a>
         <a href="#" class="btn btn-primary  stretched-link">Add To Cart</a>
@@ -546,7 +667,7 @@ section {
 </div>
                   </ItemTemplate>
         </asp:DataList>
-</div>
+</div>--%>
 
 <%--this is main home page here--%>
      
