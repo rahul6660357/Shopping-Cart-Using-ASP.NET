@@ -447,12 +447,12 @@ section {
 
         
   <div class="abc ullu" style="background-color:black">
-    <div class="mr-auto text-white"><h3 class="company-style mt-1">Rahul's_Shopping-Cart</h3></div>
+    <div class="mr-auto text-white"><h3 class="company-style mt-1">Khareedo</h3></div>
       <div class="abc " style="align-content:center">
-    <div class="p-2 text-white"><button class=" btn">Add New Product</button></div>
-    <div class="p-2"><button class=" btn">My Profile</button></div>
-    <div class="p-2"><button class=" btn">My Cart</button></div>
-    <div class="p-2"><button class=" btn">LogOut</button></div>
+    <div class="p-2 text-white"><asp:Button runat="server" class=" btn" Text="Add New Product" OnClick="addnewproduct"></asp:Button></div>
+    <div class="p-2"><asp:Button runat="server" Text="My Profile" class=" btn" OnClick="myprofile"></asp:Button></div>
+    <div class="p-2"><asp:Button runat="server" Text="My Cart" class=" btn" OnClick="showcart"></asp:Button></div>
+    <div class="p-2"><asp:Button runat="server" Text="Logout" class=" btn"></asp:Button></div>
   </div>
       </div>
            
@@ -461,19 +461,19 @@ section {
 
         <ul class=" ullu nav nav-pills nav-fill bg-info  ">
   <li class="nav-item">
-    <asp:LinkButton  class="nav-link text-white ulli" runat="server" Click="showhome" Text="HOME"></asp:LinkButton>
+    <asp:LinkButton  class="nav-link text-white ulli" runat="server" Text="HOME" OnClick="showhome"></asp:LinkButton>
   </li>
   <li class="nav-item">
-    <asp:LinkButton runat="server"  class="nav-link text-white ulli" Text="ELECTRONICS"  Click="showelectronics"></asp:LinkButton>
+    <asp:LinkButton runat="server"  class="nav-link text-white ulli" Text="ELECTRONICS"  OnClick="showelectronic"></asp:LinkButton>
   </li>
   <li class="nav-item">
-    <asp:HyperLink runat="server" class="nav-link text-white ulli" Text="BOOKS"></asp:HyperLink>
+    <asp:LinkButton runat="server" class="nav-link text-white ulli" Text="BOOKS" OnClick="showbooks"></asp:LinkButton>
   </li>
   <li class="nav-item">
-    <asp:HyperLink runat="server" Text="SHOES"  class="nav-link text-white ulli" ></asp:HyperLink>
+    <asp:LinkButton runat="server" Text="SHOES"  class="nav-link text-white ulli" OnClick="showshoes" ></asp:LinkButton>
   </li>
   <li class="nav-item">
-    <asp:HyperLink runat="server"  class="nav-link text-white ulli" Text="CLOTHINGS"></asp:HyperLink>
+    <asp:LinkButton runat="server"  class="nav-link text-white ulli" Text="CLOTHINGS" OnClick="showcloths"></asp:LinkButton>
   </li>
 </ul>
 
@@ -545,27 +545,27 @@ section {
         <h4  class="text-danger">Filter Items</h4>
         <div class="form-check">
           <label class="form-check-label">
-            <asp:RadioButton ID="radio1" runat="server" class="form-check-input" GroupName="price" Text="99-2000"/>
+            <asp:RadioButton ID="radio1" runat="server" class="form-check-input" GroupName="price" Text="99-2000" OnCheckedChanged="pricefilter" AutoPostBack="true"/>
           </label>
         </div>
         <div class="form-check">
           <label class="form-check-label">
-            <asp:RadioButton ID="radio2" class="form-check-input" runat="server" GroupName="price" Text="2000-4000"/>
+            <asp:RadioButton ID="radio2" class="form-check-input" runat="server" GroupName="price" Text="2000-4000" OnCheckedChanged="pricefilter" AutoPostBack="true"/>
           </label>
         </div>
         <div class="form-check">
           <label class="form-check-label">
-            <asp:RadioButton runat="server"  ID="radio3" class="form-check-input" GroupName="price" Text="4000-6000"/>
+            <asp:RadioButton runat="server"  ID="radio3" class="form-check-input" GroupName="price" Text="4000-6000" OnCheckedChanged="pricefilter" AutoPostBack="true"/>
           </label>
         </div>
           <div class="form-check">
           <label class="form-check-label">
-            <asp:RadioButton runat="server"  ID="RadioButton1" class="form-check-input" GroupName="price" Text="6000-10000"/>
+            <asp:RadioButton runat="server"  ID="RadioButton1" class="form-check-input" GroupName="price" Text="6000-10000" OnCheckedChanged="pricefilter" AutoPostBack="true"/>
           </label>
         </div>
           <div class="form-check">
           <label class="form-check-label">
-            <asp:RadioButton runat="server"  ID="RadioButton2" class="form-check-input" GroupName="price" Text="10000-20000"/>
+            <asp:RadioButton runat="server"  ID="RadioButton2" class="form-check-input" GroupName="price" Text="10000-20000" OnCheckedChanged="pricefilter" AutoPostBack="true"/>
           </label>
         </div>
       </div>
@@ -586,18 +586,29 @@ section {
       </div>
       <div class="card-body text-center">
         <h4 class="card-title text-center mb-2">
-          
-            <asp:Label ID="lbl2" runat="server" Text='<%# Bind("name") %>'>
+            <div>
+            Product Id: 
+           <asp:Label ID="Label1" runat="server" Text='<%# Bind("product_id") %>'>
            
             </asp:Label>
+            </div>
+            <div class=" text-danger">
+   <asp:Label ID="lbl2" runat="server" Text='<%# Bind("name") %>'>
+           
+            </asp:Label>
+                
+            </div>
+         
         </h4>
 
         <div class="bg-success text-white text-center">
               Price:
            <asp:Label runat="server" Text= '<%# Bind("price") %>' ID="pricelbl"></asp:Label>
         </div>
-      <div>  <a href="#" class="text-primary stretched-link " >View Details</a></div>
-        <a href="#" class="btn btn-primary  stretched-link">Add To Cart</a>
+      <div >
+         
+          <asp:LinkButton runat="server" ID="linkbtn" class="text-primary stretched-link ulli" Text="View Details" CommandArgument='<%# Bind("product_id")%>' CommandName="ThisBtnClick" OnClick="Gotodetails" ></asp:LinkButton></div>
+        <asp:LinkButton runat="server" OnClick="addtocart" ID="addcart" CommandArgument='<%# Bind("product_id")%>' class="btn btn-primary  stretched-link">Add To Cart</asp:LinkButton>
       </div>
     </div>
 
@@ -606,68 +617,6 @@ section {
                     </asp:DataList>
         </div>
 </div>
-
-
-
-
-
-
-<%--        <div class="d-flex" style="background-color: lightgray">
-<div class="d-flex bg-dark  w-25"  >
-  <div  style="margin-left:10px;margin-top:20px">
-    <div class="card bg-info m-5">
-      <div class="card-body">
-        <h4>Filter Items</h4>
-        <div class="form-check">
-          <label class="form-check-label">
-            <asp:CheckBox ID="checkbox" runat="server" class="form-check-input" Text="Option 1"/>
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <asp:CheckBox ID="checkbox2" class="form-check-input" runat="server" Text="Option 2"/>
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <asp:CheckBox runat="server"  ID="checkbox3" class="form-check-input" Text="Option 3"/>
-          </label>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-             <asp:DataList ID="productlist" runat="server">
-            <ItemTemplate>
-  <div class="w-75 m-4 my-2 d-flex flex-wrap">
-    <div  class="m-2">
-
-    <div class="card" style="width:225px; height: 320px">
-
-      <div class="mt-3 mx-auto">
-        <asp:Image ImageUrl='<%# Bind("image") %>' runat="server" ID="img1"  />
-      </div>
-      <div class="card-body text-center">
-        <h4 class="card-title text-center mb-2">
-            <asp:Label ID="lbl2" runat="server" Text= '<%# Bind("name") %>'>
-           
-            </asp:Label>
-        </h4>
-
-        <div class="bg-success text-white text-center mb-3">
-           <asp:Label runat="server" Text= '<%# Bind("price") %>' ID="pricelbl"></asp:Label>
-        </div>
-        <a href="#" class="text-primary stretched-link mb-3">View Details</a>
-        <a href="#" class="btn btn-primary  stretched-link">Add To Cart</a>
-      </div>
-    </div>
-
-    </div>
-</div>
-                  </ItemTemplate>
-        </asp:DataList>
-</div>--%>
 
 <%--this is main home page here--%>
      
