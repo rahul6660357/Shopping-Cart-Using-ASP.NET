@@ -97,10 +97,12 @@
     <Content Include="Images\phone4.jpg" />
     <Content Include="Images\phone5.jpg" />
     <Content Include="Images\phone6.jpg" />
+    <Content Include="Images\phone7.jpg" />
     <Content Include="Images\shoes1.jpg" />
     <Content Include="Images\shoes2.jpg" />
     <Content Include="Images\shoes3.jpg" />
     <Content Include="myprofile.aspx" />
+    <Content Include="orderhistory.aspx" />
     <Content Include="productdetails.aspx" />
     <Content Include="signup.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -244,6 +246,13 @@
     </Compile>
     <Compile Include="myprofile.aspx.designer.cs">
       <DependentUpon>myprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="orderhistory.aspx.cs">
+      <DependentUpon>orderhistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="orderhistory.aspx.designer.cs">
+      <DependentUpon>orderhistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="productdetails.aspx.cs">
       <DependentUpon>productdetails.aspx</DependentUpon>

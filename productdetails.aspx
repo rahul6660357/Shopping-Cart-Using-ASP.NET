@@ -189,7 +189,7 @@ body {
 		
 			<div class="card_footer">
 				<span class="price">$<asp:Label ID="labl3" class="price" runat="server" Text='<%# Bind("price") %>'></asp:Label></span>
-				<asp:LinkButton runat="server" Text="Add to Cart"  class="btn" OnClick="addtocart">
+				<asp:LinkButton runat="server" Text="Add to Cart"  class="btn" OnClick="addtocart" OnClientClick="javascript:return alert('Added Successfully');">
 					
 				</asp:LinkButton>
 			</div>

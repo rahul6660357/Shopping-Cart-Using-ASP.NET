@@ -387,8 +387,9 @@ tr.productitm {
       <h1>My Cart</h1>
     </header>
     <div class="page">
+
         
-           <asp:DataList runat="server" ID="show">
+           <asp:DataList runat="server" ID="show" >
                <ItemTemplate>
       <table id="cart">
         <thead>
@@ -408,13 +409,13 @@ tr.productitm {
 
                 <div class="input-group abcd">
           <div class="input-group-btn">
-              <asp:LinkButton runat="server" ID="plusbtn" class="btn btn-danger btn-number fa fa-minus" >
+              <asp:LinkButton runat="server" ID="plusbtn" class="btn btn-danger btn-number fa fa-minus"  CommandArgument='<%# Bind("product_id")%>' OnClick="subtractquantity"   >
               </asp:LinkButton>
           </div>
          <div> <asp:TextBox type="text" runat="server" ID="txtbox" class="form-control input-number" Text='<%# Bind("quantity") %>'></asp:TextBox>
                 </div>
              <div class="input-group-btn"> 
-              <asp:LinkButton type="button" ID="minusbtn" class="btn btn-success btn-number fa fa-plus" runat="server">
+              <asp:LinkButton type="button" ID="minusbtn" class="btn btn-success btn-number fa fa-plus" OnClick="addquantity" CommandArgument='<%# Bind("product_id")%>' runat="server">
               </asp:LinkButton>
         
       </div>
@@ -422,7 +423,7 @@ tr.productitm {
             <td><asp:Label ID="lblname" class="justify-content-center align-items-center" runat="server"  Text='<%# Bind("name") %>'></asp:Label></td>
               
             <td><asp:Label runat="server" class=" text-center justify-content-center align-items-center" ID="pricelbl"  Text='<%# Bind("price") %>'></asp:Label></td>
-            <td><span class="remove"><asp:ImageButton class="justify-content-center align-items-center" runat="server" ImageUrl="https://i.imgur.com/h1ldGRr.png" ></asp:ImageButton></span></td>
+            <td><span class="remove"><asp:ImageButton ID="img" class="justify-content-center align-items-center" runat="server"  CommandArgument='<%# Bind("product_id")%>' CommandName="ThisBtnClick" ImageUrl="https://i.imgur.com/h1ldGRr.png"  OnClick="deleteitem" CausesValidation="True"></asp:ImageButton></span></td>
         
                </tr>
           <!-- tax + subtotal -->
@@ -440,7 +441,7 @@ tr.productitm {
                         <div class="w-50 light text-center text-danger" style="font-size:large">2500</div>
         </div>
         <div class="w page text-center">
-            <asp:linkbutton runat="server" ID="submitbtn" class="checkout btn btn-primary " Text="Checkout Now"></asp:linkbutton>
+            <asp:linkbutton runat="server" ID="submitbtn" class="checkout btn btn-primary " OnClick="checkout" Text="Checkout Now"></asp:linkbutton>
         </div>
            </div>
   </div>

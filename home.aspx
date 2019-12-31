@@ -608,7 +608,7 @@ section {
       <div >
          
           <asp:LinkButton runat="server" ID="linkbtn" class="text-primary stretched-link ulli" Text="View Details" CommandArgument='<%# Bind("product_id")%>' CommandName="ThisBtnClick" OnClick="Gotodetails" ></asp:LinkButton></div>
-        <asp:LinkButton runat="server" OnClick="addtocart" ID="addcart" CommandArgument='<%# Bind("product_id")%>' class="btn btn-primary  stretched-link">Add To Cart</asp:LinkButton>
+        <asp:LinkButton runat="server" OnClick="addtocart" ID="addcart" CommandArgument='<%# Bind("product_id")%>' class="btn btn-primary  stretched-link"  OnClientClick="javascript:return alert('Added Successfully');">Add To Cart</asp:LinkButton>
       </div>
     </div>
 
