@@ -452,7 +452,7 @@ section {
     <div class="p-2 text-white"><asp:Button runat="server" class=" btn" Text="Add New Product" OnClick="addnewproduct"></asp:Button></div>
     <div class="p-2"><asp:Button runat="server" Text="My Profile" class=" btn" OnClick="myprofile"></asp:Button></div>
     <div class="p-2"><asp:Button runat="server" Text="My Cart" class=" btn" OnClick="showcart"></asp:Button></div>
-    <div class="p-2"><asp:Button runat="server" Text="Logout" class=" btn"></asp:Button></div>
+    <div class="p-2"><asp:Button runat="server" Text="Logout" class=" btn" OnClick="Unnamed4_Click"></asp:Button></div>
   </div>
       </div>
            

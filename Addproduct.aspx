@@ -37,7 +37,7 @@
       <label class="col-md-4 control-label" for="product_categorie">PRODUCT CATEGORY:-</label>
       <div class="col-md-4">
            <asp:DropDownList ID="category1"
-                    AutoPostBack="True"
+                    AutoPostBack="True" 
                    
                     runat="server">
 

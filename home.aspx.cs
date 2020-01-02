@@ -209,5 +209,13 @@ namespace Shopping_Cart
 
 
         }
+
+        protected void Unnamed4_Click(object sender, EventArgs e)
+        {
+           Session.Clear();
+
+        //    int p =  Convert.ToInt32(Session["UserID"].ToString());
+            Response.Redirect("~/login.aspx");
+        }
     }
 }
