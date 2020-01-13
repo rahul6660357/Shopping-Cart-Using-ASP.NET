@@ -190,8 +190,7 @@ namespace Shopping_Cart
                 {
                     Console.WriteLine("product added");
                 }
-
-            }
+                  }
             else
             {
                 cmd = new SqlCommand("updatequantity", con);
